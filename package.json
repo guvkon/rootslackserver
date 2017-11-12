@@ -4,22 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nohup forever start -l forever.log index.js > /dev/null 2>&1 &",
+    "stop": "forever stopall"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Artemnsk/rootslackserver.git"
+    "url": "git+https://github.com/guvkon/rootslackserver.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Artemnsk/rootslackserver/issues"
+    "url": "https://github.com/guvkon/rootslackserver/issues"
   },
-  "homepage": "https://github.com/Artemnsk/rootslackserver#readme",
+  "homepage": "https://github.com/guvkon/rootslackserver#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "greenlock-express": "^2.0.11",
-    "pug": "^2.0.0-rc.4",
-    "redirect-https": "^1.1.4"
+    "forever": "^0.15.3",
+    "pug": "^2.0.0-rc.4"
   }
 }
